@@ -146,7 +146,8 @@ sp_v <-
               geom = c('long', 'lat'),
               crs = crs(world_curr))
 
-### creating background area using 100km buffer around each presence points
+### creating background area as minimum convex polygon that includes all presence points
+### and with 100km buffer around the MCP
 cvb <- terra::convHull(sp_v) %>% terra::buffer(width = 100 * 1000)
 
 ### masking current climatic data to background area
