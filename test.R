@@ -40,7 +40,7 @@ bd <- terra::vect('aves_bd/BGD_adm/BGD_adm0.shp')
 
 bd_pa <- terra::vect('whis/bd_pa.shp')
 
-### current bioclimatic varaibles at 0.5' resolution
+### current bioclimatic varaibles at 2.5' resolution
 world_curr <- terra::rast(
   c(
     'wc2.1_2.5m_bio/wc2.1_2.5m_bio_1.tif',
@@ -65,7 +65,7 @@ world_curr <- terra::rast(
   )
 )
 
-### future bioclimatic variables using MPIESM12HR GCM at 0.5' resolution
+### future bioclimatic variables using MPIESM12HR GCM at 2.5' resolution
 world_2050_245 <-
   terra::rast("worldclim_2.5/wc2.1_2.5m_bioc_MPI-ESM1-2-HR_ssp245_2041-2060.tif")
 world_2050_370 <-
