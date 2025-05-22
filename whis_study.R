@@ -12,7 +12,6 @@ library('patchwork')
 library('pROC')
 library('geodata')
 
-
 set.seed(112)
 
 
